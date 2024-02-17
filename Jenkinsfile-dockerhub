@@ -5,13 +5,13 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES')
      }
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('chiny-dockerhub')
-    APP_NAME = "chiny001/amazon"
+    DOCKERHUB_CREDENTIALS = credentials('chiomeni-dockerhub')
+    APP_NAME = "chiomeni/amazon"
     }
     stages { 
         stage('SCM Checkout') {
             steps{
-           git branch: 'main', url: 'https://github.com/chiny001/Amazon-clone-Dockerized.git'
+           git branch: 'main', url: 'https://github.com/Chiny001/Amazon-clone-Dockerized.git'
             }
         }
         // run sonarqube test
